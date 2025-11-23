@@ -27,9 +27,9 @@ export class Menu extends View
             return;
         }
 
-        this.cardTaskButton.position.set((getGameApp().screen.width * 0.25) - Button.WIDTH, getGameApp().screen.height * 0.5);
-        this.talkTaskButton.position.set((getGameApp().screen.width * 0.5) - Button.WIDTH, getGameApp().screen.height * 0.5);
-        this.flameTaskButton.position.set((getGameApp().screen.width * 0.75) - Button.WIDTH, getGameApp().screen.height * 0.5);
+        this.cardTaskButton.position.set((getGameApp().screen.width * 0.25) - (Button.WIDTH *0.5), getGameApp().screen.height * 0.5);
+        this.talkTaskButton.position.set((getGameApp().screen.width * 0.5) - (Button.WIDTH *0.5), getGameApp().screen.height * 0.5);
+        this.flameTaskButton.position.set((getGameApp().screen.width * 0.75) - (Button.WIDTH *0.5), getGameApp().screen.height * 0.5);
     }
 
     public override hide(): void

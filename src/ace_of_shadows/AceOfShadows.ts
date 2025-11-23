@@ -47,7 +47,7 @@ export class AceOfShadows extends View
 
         this.startStack.position.set((getGameApp().screen.width * 0.5) - (this.startStack.getWidth() *0.5), getGameApp().screen.height * 0.20);
         this.endStack.position.set((getGameApp().screen.width * 0.5) - (this.startStack.getWidth() *0.5), getGameApp().screen.height * 0.70);
-        this.shuffleButton.position.set((getGameApp().screen.width * 0.5) - Button.WIDTH, getGameApp().screen.height * 0.90);
+        this.shuffleButton.position.set((getGameApp().screen.width * 0.5) - (Button.WIDTH * 0.5), getGameApp().screen.height * 0.90);
 
         for (const card of this.allCards)
         {
