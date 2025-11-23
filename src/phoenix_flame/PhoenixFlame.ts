@@ -17,21 +17,17 @@ export class PhoenixFlame extends View
     protected tipText:Text;
 
     protected mousePos:Point = new Point();
-    protected isMouseDown:boolean = false;
 
     constructor()
     {
         super();
         getGameApp().stage.on('globalpointermove', this.onMouseMove, this);
-        getGameApp().stage.on('gl', this.onMouseMove, this);
         const style: TextStyle = new TextStyle({
             align: "center",
             fill: "#000000ff",
             fontSize: 15
         });
-        this.tipText = new Text("hold and drag to move the flame", style);
-        document.body.addEventListener("pointerdown", (event) => { this.isMouseDown = true})
-        document.body.addEventListener("pointerup", (event) => { this.isMouseDown = false})
+        this.tipText = new Text("hold and drag to move the flame if on touchscreen", style);
     }
 
     public override update(deltaMS: number): void
@@ -92,10 +88,7 @@ export class PhoenixFlame extends View
 
     protected onMouseMove = (event: FederatedMouseEvent) =>
     {
-        if (this.isMouseDown)
-        {
-            this.mousePos.set(event.clientX, event.clientY);
-        }
+        this.mousePos.set(event.clientX, event.clientY);
     }
 
     private _cachedParticleOrigin:Point = new Point();

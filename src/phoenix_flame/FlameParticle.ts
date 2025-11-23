@@ -20,6 +20,7 @@ export class FlameParticle extends Graphics
         this.beginFill('white');
         this.drawEllipse(0,0,4,8);
         this.endFill();
+        this.eventMode = 'none';
     }
 
     public init(startPos:Point, lifeTime:number)
